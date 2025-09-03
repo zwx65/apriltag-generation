@@ -11,6 +11,12 @@ A Python utility for generating high-resolution AprilTag calibration boards for 
 - **Calibration Ready**: Automatic generation of calibration parameters
 - **Print Verification**: Corner markers and alignment features
 
+## Sample Output
+
+![Sample AprilTag Board](apriltag_boards/board_1_ids_0-48.png)
+
+*Example of generated 7x7 AprilTag board (IDs 0-48) with 40mm tags and 10mm spacing*
+
 ## Installation
 
 Install required dependencies:
