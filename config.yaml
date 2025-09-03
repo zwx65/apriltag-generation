@@ -1,0 +1,37 @@
+# AprilTag Board Generation Configuration
+
+apriltag:
+  family: "36h11"  # AprilTag family options:
+                   # - "36h11" (default, most robust, 587 unique tags)
+                   # - "25h9" (smaller dictionary, 35 unique tags)
+                   # - "16h5" (smallest dictionary, 30 unique tags)
+  grid_x: 7        # Number of tags in X direction
+  grid_y: 7        # Number of tags in Y direction
+  tag_size_mm: 40  # Size of each tag in millimeters
+  spacing_mm: 10   # Spacing between tags in millimeters
+  border_mm: 10    # Border around the entire board in millimeters
+  dpi: 300         # Dots per inch for image generation
+
+# Board configurations - each board will contain a range of AprilTag IDs
+boards:
+  - name: "Board 1"
+    start_id: 0
+    end_id: 48
+  - name: "Board 2"
+    start_id: 49
+    end_id: 97
+  - name: "Board 3"
+    start_id: 98
+    end_id: 146
+
+# Output configuration
+output:
+  directory: "apriltag_boards"  # Output directory for generated boards
+
+# Corner markers and alignment features
+features:
+  corner_markers: true      # Add corner markers for alignment
+  corner_marker_size_mm: 5  # Size of corner markers in millimeters
+  corner_marker_thickness_mm: 1  # Thickness of corner markers
+  black_corner_squares: true     # Add black squares at tag intersections
+  corner_square_size_mm: 10      # Size of corner squares in millimeters
